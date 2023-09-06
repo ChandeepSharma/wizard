@@ -1,0 +1,60 @@
+#card-1 .line-1 ::after {
+    content: "";
+    width: 58px;
+    height: 3px;
+    background:  #c4b3d4;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+#card-1 .line-2 ::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: rgb(196, 179, 212);
+    position: absolute;
+    top: 12px;
+    left: 92px;
+}
+#card-2 .line-1 ::after {
+    content: "";
+    width: 58px;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+#card-2 .line-2 ::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: rgb(196, 179, 212);
+    position: absolute;
+    top: 12px;
+    left: 92px;
+}
+#card-3 .line-1 ::after {
+    content: "";
+    width: 58px;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+#card-3 .line-2 ::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    top: 12px;
+    left: 92px;
+}
+.dots{
+    width: 30%;
+}
+.bg-blank{
+    background-color: #c4b3d4;
+}
