@@ -1,0 +1,19 @@
+jQuery(document).ready(function(){
+    $("#btnForward-1").click(function(){
+        $("#card-1").removeClass("active");
+        $("#card-2").addClass("active");
+    })
+    $("#btnForward-2").click(function(){
+        $("#card-1").removeClass("active");
+        $("#card-2").removeClass("active");
+        $("#card-3").addClass("active");
+    })
+    $("#btnBackward-1").click(function(){
+        $("#card-2").removeClass("active");
+        $("#card-1").addClass("active");
+    })
+    $("#btnBackward-2").click(function(){
+        $("#card-3").removeClass("active");
+        $("#card-2").addClass("active");
+    })
+});

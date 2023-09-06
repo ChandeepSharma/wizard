@@ -58,3 +58,6 @@
 .bg-blank{
     background-color: #c4b3d4;
 }
+.active{
+    display: block !important;
+}

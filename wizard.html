@@ -15,14 +15,18 @@
 
   <!-- CSS file  -->
   <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- animation link  -->
+  <link rel="stylesheet" href="CSS/animate.css_animate.min.css">
 </head>
 
 <body>
 
   <!-- Registration form -->
   <section class="container">
-    <div id="card-1" class="card card-1 m-5 mx-auto rounded-0" style="max-width: 80%;">
-      <div class="row g-0 d-flex align-items-center">
+    <!-- card-1  -->
+    <div id="card-1" class="card card-1 m-5 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
+      <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
         </div>
@@ -76,15 +80,18 @@
                 <input type="checkbox" name="" id=""><span><small> Nor again is there anyone who loves or pursues or desires to obtaini.</small></span>
               </div>
               <div class="col-md-4 mt-5">
-                <button type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
+                <button id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <div id="card-2" class="card card-2 m-5 mx-auto rounded-0" style="max-width: 80%;">
-      <div class="row g-0 d-flex align-items-center">
+    <!--/ card-1  -->
+
+    <!-- card-2  -->
+    <div id="card-2" class="card card-2 m-5 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+      <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-2.jpg" class="img-fluid" alt="">
         </div>
@@ -121,16 +128,19 @@
                 </select>
               </div>
               <div class="col-md-7 mt-5 ms-auto">
-                <button type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3">←Backward</button>
-                <button type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
+                <button id="btnBackward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3">←Backward</button>
+                <button id="btnForward-2" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <div id="card-3" class="card card-3 m-5 mx-auto rounded-0" style="max-width: 80%;">
-      <div class="row g-0 d-flex align-items-center">
+    <!--/ card-2  -->
+
+    <!-- card-2  -->
+    <div id="card-3" class="card card-3 m-5 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+      <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
         </div>
@@ -157,24 +167,30 @@
                 <input type="checkbox" name="" id=""><span><small> Please accept terms and conditions ?</small></span>
               </div>
               <div class="col-md-7 mt-4 ms-auto">
-                <button type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3">←Backward</button>
-                <button type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
+                <button id="btnBackward-2" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3">←Backward</button>
+                <button id="btnForward-3" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <!--/ card-2  -->
+
 
   </section>
   <!--/ Registration form -->
 
   <!-- js file links  -->
-  <script src="/wizard/jquery-3.7.1.min.js"></script>
-  <script src="/wizard/jQuery.js"></script>
+  <script src="JS/jquery-3.7.1.min.js"></script>
+  <script src="JS/jQuery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
 
 </body>
 
