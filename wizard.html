@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- document's title  -->
   <title>Wizard</title>
@@ -21,11 +20,10 @@
 </head>
 
 <body>
-
   <!-- Registration form -->
   <section class="container">
     <!-- card-1  -->
-    <div id="card-1" class="card card-1 m-5 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-1" class="card card-1 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
@@ -76,11 +74,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-8 mt-5">
-                <input type="checkbox" name="" id=""><span><small> Nor again is there anyone who loves or pursues or desires to obtaini.</small></span>
+              <div class="col-md-8 mt-5 text-start d-flex">
+                <span><input type="checkbox" name="" id=""></span><label class="ms-2"><small>Nor again is there anyone who loves or pursues or desires to obtaini.</small></label>
               </div>
               <div class="col-md-4 mt-5">
-                <button id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
+                <input id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold" name="" value="Forward→"/>
               </div>
             </form>
           </div>
@@ -90,7 +88,7 @@
     <!--/ card-1  -->
 
     <!-- card-2  -->
-    <div id="card-2" class="card card-2 m-5 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-2" class="card card-2 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-2.jpg" class="img-fluid" alt="">
@@ -128,8 +126,8 @@
                 </select>
               </div>
               <div class="col-md-7 mt-5 ms-auto">
-                <button id="btnBackward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3">←Backward</button>
-                <button id="btnForward-2" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold">Forward→</button>
+                <input id="btnBackward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3" value="←Backward"/>
+                <input id="btnForward-2" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold" value="Forward→"/>
               </div>
             </form>
           </div>
@@ -139,7 +137,7 @@
     <!--/ card-2  -->
 
     <!-- card-2  -->
-    <div id="card-3" class="card card-3 m-5 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-3" class="card card-3 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
@@ -191,7 +189,5 @@
     <script>
      new WOW().init();
     </script>
-
 </body>
-
 </html>

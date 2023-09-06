@@ -1,6 +1,9 @@
+body{
+    background-color: rgb(249, 243, 235);
+}
 #card-1 .line-1 ::after {
     content: "";
-    width: 58px;
+    width: 62px;
     height: 3px;
     background:  #c4b3d4;
     position: absolute;
@@ -9,7 +12,7 @@
 }
 #card-1 .line-2 ::after {
     content: "";
-    width: 60px;
+    width: 64px;
     height: 3px;
     background: rgb(196, 179, 212);
     position: absolute;
@@ -18,7 +21,7 @@
 }
 #card-2 .line-1 ::after {
     content: "";
-    width: 58px;
+    width: 62px;
     height: 3px;
     background: blueviolet;
     position: absolute;
@@ -27,16 +30,16 @@
 }
 #card-2 .line-2 ::after {
     content: "";
-    width: 60px;
+    width: 62px;
     height: 3px;
     background: rgb(196, 179, 212);
     position: absolute;
     top: 12px;
-    left: 92px;
+    left: 94px;
 }
 #card-3 .line-1 ::after {
     content: "";
-    width: 58px;
+    width: 62px;
     height: 3px;
     background: blueviolet;
     position: absolute;
@@ -45,12 +48,12 @@
 }
 #card-3 .line-2 ::after {
     content: "";
-    width: 60px;
+    width: 64px;
     height: 3px;
     background: blueviolet;
     position: absolute;
     top: 12px;
-    left: 92px;
+    left: 93px;
 }
 .dots{
     width: 30%;
@@ -60,4 +63,8 @@
 }
 .active{
     display: block !important;
+}
+.container{
+    height: 100vh;
+    padding: 240px 0px;
 }
