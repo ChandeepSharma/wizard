@@ -24,7 +24,7 @@
   <!-- Registration form -->
   <section class="container">
     <!-- card-1  -->
-    <div id="card-1" class="card card-1 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-1" class="card card-1 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
@@ -89,14 +89,14 @@
     <!--/ card-1  -->
 
     <!-- card-2  -->
-    <div id="card-2" class="card card-2 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-2" class="card card-2 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-2.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-md-8 text-center px-5">
           <div class="card-body">
-            <h3 class="border text-center mx-auto py-1 mb-5" style="width: 40%;">REGISTRATION</h3>
+            <h3 class="border text-center mx-auto py-1 mb-4" style="width: 40%;">REGISTRATION</h3>
             <div class="position-relative dots justify-content-between d-flex mx-auto my-3">
               <a href="#" class="line-1"><small><i
                     class="bi bi-dot bg-primary px-2 py-0 rounded-circle text-danger"></i></small></a>
@@ -105,33 +105,33 @@
               <a href="#"><small><i class="bi bi-dot bg-blank px-2 py-0 rounded-circle text-danger"></i></small></a>
             </div>
             <p class="text-danger fs-5 fw-semibold">Please fill with additional info</p>
-            <form class="row gx-5 gy-3">
+            <form id="form-2" class="row gx-5 gy-3">
               <div class="col-md-12">
-                <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="
-                  inputEmail4" placeholder="Your Address">
+                <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="inputAddress" placeholder="Your Address">
+                  <div id="checkAddress" class="small text-danger text-start"><small>This field is Required</small></div>
               </div>
               <div class="col-md-6">
-                <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="
-                  inputEmail4" placeholder="City">
+                <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="inputCity" placeholder="City">
+                  <div id="checkCity" class="small text-danger text-start"><small>This field is Required</small></div>
               </div>
               <div class="col-md-6">
-                <input type="number" class="form-control border-0 border-bottom rounded-0 border-2" id="
-                  inputPassword4" placeholder="Zip Code">
+                <input type="number" class="form-control border-0 border-bottom rounded-0 border-2" id="inputZip" placeholder="Zip Code">
               </div>
               <div class="col-md-6">
-                <select class="form-select border-0 border-bottom rounded-0 border-2 text-info-emphasis"
-                  aria-label="Default select example">
+                <select id="inputCountry" class="form-select border-0 border-bottom rounded-0 border-2 text-info-emphasis"
+                  aria-label="Default select example" disabled>
                   <option selected class="rounded-0">Your Country</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
+                <div id="checkCountry" class="small text-danger text-start"><small>This field is Required</small></div>
               </div>
               <div class="col-md-7 mt-5 ms-auto">
                 <input id="btnBackward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold me-3"
                   value="← Backward" />
                 <input id="btnForward-2" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold"
-                  value="Forward →" />
+                  value="Forward →" disabled/>
               </div>
             </form>
           </div>
