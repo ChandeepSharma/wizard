@@ -40,7 +40,7 @@
               <a href="#"><small><i class="bi bi-dot bg-blank px-2 py-0 rounded-circle text-danger"></i></small></a>
             </div>
             <p class="text-danger fs-5 fw-semibold">Please fill with your details</p>
-            <form id="form-1" class="row gx-5 gy-3">
+            <form action="#" method="get" id="form-1" class="row gx-5 gy-3" autocomplete="off">
               <div class="col-md-6">
                 <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="firstName"
                   placeholder="First Name" value="">
@@ -62,9 +62,9 @@
                 <div id="ageValidate" class="text-danger small text-start"><small>This is Required.</small></div>
               </div>
               <div class="col-md-6">
-                <div id="div" class="row pt-3">
+                <div class="row pt-3">
                   <div class="col-md-5">
-                    <input type="radio" name="gender" id="genderMale" value="option2">
+                    <input type="radio" name="gender" id="genderMale" value="option2" checked>
                     <label class="form-check-label" for="gender">Male</label>
                   </div>
                   <div class="col-md-5">
@@ -74,11 +74,11 @@
                 </div>
               </div>
               <div class="col-md-8 mt-4 text-start d-flex">
-                <span><input type="checkbox" name="check" id="checkField"></span><label class="ms-2"><small>Nor again is there anyone
+                <span><input type="checkbox" name="check" id="checkField" disabled></span><label class="ms-2"><small>Nor again is there anyone
                     who loves or pursues or desires to obtaini.</small><div id="checkValidate" class="small text-danger"><small>please check this field</small></div></label>
               </div>
               <div class="col-md-4 mt-5">
-                <input id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold" name=""
+                <input id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold" name="submit form"
                   value="Forward →" disabled/>
               </div>
             </form>

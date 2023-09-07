@@ -17,8 +17,7 @@ jQuery(document).ready(function(){
         $("#card-2").addClass("active");
     });
      
-
-    // form validation 
+    // form-1 validation 
     $("#form-1").keyup(function(){
         let  firstName = $("#firstName").val();
         let  lastName = $("#lastName").val();
@@ -27,35 +26,35 @@ jQuery(document).ready(function(){
 
     if (firstName.length < 3 || firstName.length > 10){
         $("#firstNameValidate").show();
-        $("#btnForward-1").prop("disabled","disabled")
+        $("#checkField").prop("disabled","disabled")
     }
     else{
         $("#firstNameValidate").hide();
-        $("#btnForward-1").removeAttr("disabled","disabled")
+        $("#checkField").removeAttr("disabled","disabled")
     }
     if (lastName.length < 3 || lastName.length > 10){
         $("#lastNameValidate").show();
-        $("#btnForward-1").prop("disabled","disabled")
+        $("#checkField").prop("disabled","disabled")
     }
     else{
         $("#lastNameValidate").hide();
-        $("#btnForward-1").removeAttr("disabled","disabled")
+        $("#checkField").removeAttr("disabled","disabled")
     }
     if (email == ""){
         $("#emailValidate").show();
-        $("#btnForward-1").prop("disabled","disabled")
+        $("#checkField").prop("disabled","disabled")
     }
     else{
         $("#emailValidate").hide();
-        $("#btnForward-1").removeAttr("disabled","disabled")
+        $("#checkField").removeAttr("disabled","disabled")
     }
     if (age == ""){
         $("#ageValidate").show();
-        $("#btnForward-1").prop("disabled","disabled")
+        $("#checkField").prop("disabled","disabled")
     }
     else{
         $("#ageValidate").hide();
-        $("#btnForward-1").removeAttr("disabled","disabled")
+        $("#checkField").removeAttr("disabled","disabled")
     }
     });
     $("#checkField").click(function(){
@@ -70,20 +69,8 @@ jQuery(document).ready(function(){
             $("#btnForward-1").removeAttr("disabled","disabled")
         }
     });
-    $("div").click(function(e){  
-        console.log("object");
-        let genderMale = $("#checkField").val();
-        let genderFemale = $("#checkField").val();
-        let radio = $(this).prop("checked","checked")
-        if (radio == genderMale || radio == genderFemale){
-            $("#btnForward-1").prop("disabled","disabled")
-        }
-        else{
-            $("#btnForward-1").removeAttr("disabled","disabled")
-        }
-        e.stopImmediatePropagation();
-    });
+    
     $("#btnForward-1").click(function(e){
         e.preventDefault();
     })
-});
+}); 
