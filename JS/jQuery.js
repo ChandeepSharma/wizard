@@ -18,90 +18,141 @@ jQuery(document).ready(function(){
     });
      
     // form-1 validation 
-    $("#form-1").keyup(function(){
+    
+    $("#form-1").keyup(function(e){
         let  firstName = $("#firstName").val();
         let  lastName = $("#lastName").val();
         let  email = $("#inputEmail").val();
         let regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
         let  age = $("#inputAge").val();
 
-    if (firstName.length < 3 || firstName.length > 10){
-        $("#firstNameValidate").show();
-        $("#checkField").prop("disabled","disabled")
+        
+    if (firstName.length > 3 && firstName.length < 10){
+        $("#firstNameValidate").hide(); 
+        $("#btnForward-1".prop("disabled","disabled"))       
     }
     else{
-        $("#firstNameValidate").hide();
-        $("#checkField").removeAttr("disabled","disabled")
+        $("#firstNameValidate").show();        
     }
-    if (lastName.length < 3 || lastName.length > 10){
+    if (lastName.length > 3 && lastName.length < 10){
+        $("#lastNameValidate").hide(); 
+    }
+    else{
         $("#lastNameValidate").show();
-        $("#checkField").prop("disabled","disabled")
     }
-    else{
-        $("#lastNameValidate").hide();
-        $("#checkField").removeAttr("disabled","disabled")
-    }
-    if (!regex.test(email)){
-        $("#emailValidate").show();
-        $("#checkField").prop("disabled","disabled")
-    }
-    else{
+    if (regex.test(email)){
         $("#emailValidate").hide();
-        $("#checkField").removeAttr("disabled","disabled")
-    }
-    if (age == ""){
-        $("#ageValidate").show();
-        $("#checkField").prop("disabled","disabled")
     }
     else{
-        $("#ageValidate").hide();
-        $("#checkField").removeAttr("disabled","disabled")
+        $("#emailValidate").show();
     }
-    });
-    $("#checkField").click(function(){
-        let check = $("#checkField").val();
-        let terms = $("#checkField").prop("checked","checked")
-        if (check == terms){
-            $("#checkValidate").show();
-            $("#btnForward-1").prop("disabled","disabled")
+    if (age !== ""){
+        $("#ageValidate").hide();
+    }
+    else{
+        $("#ageValidate").show();
+    }
+    if (firstName.length > 3 && firstName.length < 10){
+        $("#firstNameValidate").hide();
+        $("#btnForward-1").removeAttr("disabled","disabled") 
+        if (lastName.length > 3 && lastName.length < 10){
+            $("#lastNameValidate").hide(); 
+            $("#btnForward-1").removeAttr("disabled","disabled")
+            if (regex.test(email)){
+                $("#emailValidate").hide();
+                $("#btnForward-1").removeAttr("disabled","disabled")
+                if (age !== ""){
+                    $("#ageValidate").hide();
+                    $("#btnForward-1").removeAttr("disabled","disabled")
+                }
+                else{
+                    $("#ageValidate").show();
+                }
+            }
+            else{
+                $("#emailValidate").show();
+            }
         }
         else{
-            $("#checkValidate").hide();
-            $("#btnForward-1").removeAttr("disabled","disabled")
-        }
+            $("#lastNameValidate").show();
+        }       
+    }
+    else{
+        $("#firstNameValidate").show();        
+    }
+    
+    
+    
     });
     
+    $("#btnForward-1").click(function(e){
+        e.preventDefault();
+    })
+    
+
+
+
     // form-2 validation 
-    $("#form-2").keyup(function(){
-        let  address = $("#inputAddress").val();
-        let  city = $("#inputCity").val();
-    if (address.length < 3 || address.length > 10){
-        $("#checkAddress").show();
-        $("#inputCountry").prop("disabled","disabled")
-    }
-    else{
-        $("#checkAddress").hide();
-        $("#inputCountry").removeAttr("disabled","disabled")
-    }
-    if (city.length < 3 || city.length > 10){
-        $("#checkCity").show();
-        $("#inputCountry").prop("disabled","disabled")
-    }
-    else{
-        $("#checkCity").hide();
-        $("#inputCountry").removeAttr("disabled","disabled")
-    }
-    });
     $("#inputCountry").click(function(){
-        let  country = $("#inputCountry").val();
-        if (country == "Your Country"){
-            $("#checkCountry").show();
-            $("#btnForward-2").prop("disabled","disabled")
+        let country = $("#inputCountry").val();
+        if (country !== "Your Country"){
+            $("#checkCountry").hide();
         }
         else{
-            $("#checkCountry").hide();
-            $("#btnForward-2").removeAttr("disabled","disabled")
+            $("#checkCountry").show(); 
         }
+    $("#form-2").keyup(function(e){
+        let  address = $("#inputAddress").val();
+        let  city = $("#inputCity").val();
+        
+    if (address.length > 2 && address.length < 10){
+        $("#checkAddress").hide();
+        
+    }
+    else{
+        $("#checkAddress").show();
+    }
+    if (city.length > 3 && city.length < 10){
+        $("#checkCity").hide();
+        
+    }
+    else{
+        $("#checkCity").show();
+    }
+    // $("#inputCountry").click(function(){
+    //     let country = $("#inputCountry").val();
+    //     if (country !== "Your Country"){
+    //         $("#checkCountry").hide();
+    //         $("#btnForward-2").removeAttr("disabled","disabled")
+    //     }
+    //     else{
+    //         $("#checkCountry").show(); 
+    //     }
+    
+    });
+    
+
+    
+    if (address.length > 2 && address.length < 10){
+        $("#checkAddress").hide();
+        if (city.length > 3 && city.length < 10){
+            $("#checkCity").hide();
+        }
+        else{
+            $("#checkCity").show();
+            
+        }
+    }
+    else{
+        $("#checkAddress").show();
+    }
+    
+    
+    });
+    $("#btnForward-2").click(function(e){
+        e.preventDefault();
     })
+
+
     
 }); 

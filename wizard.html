@@ -24,7 +24,7 @@
   <!-- Registration form -->
   <section class="container">
     <!-- card-1  -->
-    <div id="card-1" class="card card-1 mx-auto rounded-0 d-none border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-1" class="card card-1 mx-auto rounded-0 active d-none border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-1.jpg" class="img-fluid" alt="">
@@ -40,7 +40,7 @@
               <a href="#"><small><i class="bi bi-dot bg-blank px-2 py-0 rounded-circle text-danger"></i></small></a>
             </div>
             <p class="text-danger fs-5 fw-semibold">Please fill with your details</p>
-            <form action="#" method="get" id="form-1" class="row gx-5 gy-3" autocomplete="off">
+            <form id="form-1" class="row gx-5 gy-3" autocomplete="on">
               <div class="col-md-6">
                 <input type="text" class="form-control border-0 border-bottom rounded-0 border-2" id="firstName"
                   placeholder="First Name" value="">
@@ -74,8 +74,8 @@
                 </div>
               </div>
               <div class="col-md-8 mt-4 text-start d-flex">
-                <span><input type="checkbox" name="check" id="checkField" disabled></span><label class="ms-2"><small>Nor again is there anyone
-                    who loves or pursues or desires to obtaini.</small><div id="checkValidate" class="small text-danger"><small>please check this field</small></div></label>
+                <span><input type="checkbox" name="check" id="checkField"></span><label class="ms-2"><small>Nor again is there anyone
+                    who loves or pursues or desires to obtaini.</small></label>
               </div>
               <div class="col-md-4 mt-5">
                 <input id="btnForward-1" type="submit" class="btn btn-success px-4 rounded-0 py-2 fw-semibold" name="submit form"
@@ -89,7 +89,7 @@
     <!--/ card-1  -->
 
     <!-- card-2  -->
-    <div id="card-2" class="card card-2 mx-auto rounded-0 d-none active border-0 shadow-lg" style="max-width: 80%;">
+    <div id="card-2" class="card card-2 mx-auto rounded-0 d-none  border-0 shadow-lg" style="max-width: 80%;">
       <div class="row g-0 d-flex align-items-center animate__animated animate__fadeIn animate-slower">
         <div class="col-md-4">
           <img src="images/form-wizard-2.jpg" class="img-fluid" alt="">
@@ -119,7 +119,7 @@
               </div>
               <div class="col-md-6">
                 <select id="inputCountry" class="form-select border-0 border-bottom rounded-0 border-2 text-info-emphasis"
-                  aria-label="Default select example" disabled>
+                  aria-label="Default select example">
                   <option selected class="rounded-0">Your Country</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -182,8 +182,6 @@
       </div>
     </div>
     <!--/ card-3  -->
-
-
   </section>
   <!--/ Registration form -->
 
