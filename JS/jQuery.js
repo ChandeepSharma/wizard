@@ -56,7 +56,48 @@ $("#form-1").keyup(function(){
             $("#btnForward-1").removeAttr("disabled","disabled")
         }else{
             $("#btnForward-1").prop("disabled","disabled")
-            console.log("not ok");
         }
+});
+$("#btnForward-1").click(function(e){
+    e.preventDefault();
+});
+$("#form-2").keyup(function(){
+        let  address = $("#inputAddress").val();
+        let  city = $("#inputCity").val();
+        let  country = $("#inputCountry").val();  
+        
+        console.log(city);
+  
+        if (address !== ""){
+            $("#checkAddress").hide(); 
+        }
+        else{
+            $("#checkAddress").show();
+        }
+        if (city !== ""){
+            $("#checkCity").hide(); 
+        }
+        else{
+            $("#checkCity").show();
+        }
+        $("option").click(function(){
+            if (country !== "Your Country"){
+                $("#checkCountry").hide(); 
+            }
+            else{
+                $("#checkCountry").show();
+            }
+        });
+        
+
+
+        if (firstName.length > 3 && firstName.length < 10 && lastName.length > 3 && lastName.length < 10 && regex.test(email) && age !== ""){
+            $("#btnForward-1").removeAttr("disabled","disabled")
+        }else{
+            $("#btnForward-1").prop("disabled","disabled")
+        }
+});
+$("#btnForward-1").click(function(e){
+    e.preventDefault();
 });
 });
